@@ -22,8 +22,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "demo": "grunt after-test && static dist -a 0.0.0.0 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
-    "test": "grunt"
+    "demo": "grunt after-test && http-server dist -p 1508 -o -c-1",
+    "test": "grunt",
+    "dist": "grunt dist"
   },
   "repository": {
     "type": "git",
@@ -53,7 +54,7 @@
     "load-grunt-tasks": "^3.3.0",
     "lodash": "^4.1.0",
     "marked": "^0.3.5",
-    "node-static": "^0.7.8",
+    "http-server": "^0.11.1",
     "semver": "^5.0.1",
     "shelljs": "^0.6.0"
   },
